@@ -1,0 +1,43 @@
+version: '3'
+networks:
+  default:
+    driver: bridge
+
+name: shiny-octo-spoon
+
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: ./Docker/php/Dockerfile
+    ports:
+      - "8800:80"
+    volumes:
+      - "./:/var/www/app"
+      - "./Docker/nginx:/etc/nginx/conf.d"
+    depends_on:
+      - db-host
+    networks:
+      - default
+
+  db-host:
+    image: mariadb:latest
+    networks:
+      - default
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: shiny_octo_spoon
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    links:
+      - db-host
+    environment:
+      PMA_HOST: db-host
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    ports:
+      - "8080:80"
