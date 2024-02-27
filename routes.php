@@ -12,7 +12,9 @@ return [
 
 
 
-
+    '/' => [
+        'GET' => 'app\controllers\Main@login',
+    ],
     '/login' => [
         'GET' => 'app\controllers\Main@login',
     ],

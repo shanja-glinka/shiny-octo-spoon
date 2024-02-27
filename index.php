@@ -32,7 +32,7 @@ try {
 	if ($router->isFound()) {
 		$router->executeHandler($router->getRequestHandler(), $router->getParams());
 	} else {
-		$response->setHtmlCode(404)->send('Page not found');
+		throw new Exception('Page not found', 404);
 	}
 } catch (Exception $e) {
 

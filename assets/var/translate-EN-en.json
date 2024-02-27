@@ -1,0 +1,12 @@
+{
+  "title-login": "Login",
+  "title-signup": "Signup",
+  "login-field-label": "Login",
+  "password-field-label": "Password",
+  "password-repeat-field-label": "Password repeat",
+  "name-field-label": "Name",
+  "mail-field-label": "Mail",
+  "login-button-text": "Login",
+  "signup-button-text": "Sign up",
+  "avatar-field-labe": "Avatar"
+}

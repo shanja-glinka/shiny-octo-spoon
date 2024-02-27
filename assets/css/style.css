@@ -1,0 +1,194 @@
+:root {
+  --linksColor: #848484;
+  --baseColor: #606468;
+
+  --htmlFontSize: 100%;
+
+  --bodyBackgroundColor: #f7f7f7;
+  --bodyColor: var(--baseColor);
+  --bodyFontFamily: "Open Sans";
+  --bodyFontFamilyFallback: sans-serif;
+  --bodyFontSize: 14px;
+  --bodyFontWeight: 400;
+  --bodyLineHeight: 1.5;
+
+  --borderRadus: 8px;
+
+  --inputBackgroundColor: #fff;
+  --inputHoverBackgroundColor: #e6e6e6;
+
+  --submitBackgroundColor: #ff6a6a;
+  --submitColor: #eee;
+  --submitHoverBackgroundColor: #f54f4f;
+
+  --formGap: 30px;
+}
+
+* {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 100%;
+  font-size: var(--htmlFontSize);
+}
+
+body {
+  background-color: var(--bodyBackgroundColor);
+  color: var(--bodyColor);
+  font-family: "Open Sans", sans-serif;
+  font-family: var(--bodyFontFamily), var(--bodyFontFamilyFallback);
+  font-size: 14px;
+  font-size: var(--bodyFontSize);
+  font-weight: 400;
+  font-weight: var(--bodyFontWeight);
+  line-height: 1.5;
+  line-height: var(--bodyLineHeight);
+  margin: 0;
+  min-height: 100vh;
+
+}
+
+a {
+  color: var(--linksColor);
+  outline: 0;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  text-decoration: underline;
+}
+
+input, button {
+  background-image: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  -webkit-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+button {
+  cursor: pointer;
+}
+
+.align {
+  display: grid;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-items: center;
+  place-items: center;
+}
+
+.grid {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 30vw;
+}
+
+.form {
+  display: grid;
+  grid-gap: var(--formGap);
+  gap: var(--formGap);
+}
+
+.form input[type="password"],
+.form input[type="text"],
+.form button {
+  width: 100%;
+}
+
+.form__field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form__input {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.form {
+  color: var(--baseColor);
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"],
+.form button {
+  border-radius: 8px;
+  border-radius: var(--borderRadus);
+  padding: 16px;
+}
+
+.form label {
+  margin: -25px 8px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+.form label span {
+  color: var(--baseColor);
+  font-size: 12px;
+  opacity: .5;
+}
+
+.form input[type="password"],
+.form input[type="text"],
+.form input[type="email"] {
+  background-color: var(--inputBackgroundColor);
+  border: 1px solid #ccc;
+}
+
+.form input[type="password"]:focus,
+.form input[type="password"]:hover,
+.form input[type="text"]:focus,
+.form input[type="text"]:hover,
+.form input[type="email"]:focus,
+.form input[type="email"]:hover {
+  background-color: var(--inputHoverBackgroundColor);
+}
+
+.form button {
+  background-color: var(--submitBackgroundColor);
+  color: var(--submitColor);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.form button:focus,
+.form button:hover {
+  background-color: var(--submitHoverBackgroundColor);
+}
+
+input::placeholder {
+  color: var(--baseColor);
+  opacity: .3;
+}
+
+input::-ms-input-placeholder {
+  color: var(--baseColor);
+  opacity: .3;
+}
+
+p {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.text--center {
+  text-align: center;
+}

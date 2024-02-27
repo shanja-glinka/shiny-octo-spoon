@@ -1,1 +1,69 @@
-<h1>Login</h1>
+<!DOCTYPE html>
+<html data-lang="RU-ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body class="align">
+    <div class="grid">
+      <form action="#" method="POST" class="form login">
+        <h1 data-translate="title-login"></h1>
+
+        <div class="form__field">
+          <label for="login__login">
+            <span data-translate="login-field-label"></span>
+          </label>
+          <input
+            id="login__login"
+            type="text"
+            name="login"
+            class="form__input"
+            placeholder="login"
+            required
+          />
+        </div>
+
+        <div class="form__field">
+          <label for="login__password">
+            <span data-translate="password-field-label"></span>
+          </label>
+          <input
+            id="login__password"
+            type="password"
+            name="password"
+            class="form__input"
+            placeholder="Password"
+            required
+          />
+        </div>
+
+        <div class="form__field">
+          <button type="submit" data-translate="login-button-text"></button>
+        </div>
+
+        <div class="form__field">
+          <select
+            id="page__language"
+            type="language"
+            name="language"
+            class="form__select"
+          >
+            <option value="RU-ru">Русский</option>
+            <option value="EN-en">English</option>
+          </select>
+        </div>
+      </form>
+
+      <p class="text--center">
+        <a href="/signup" data-translate="title-signup"></a>
+      </p>
+    </div>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

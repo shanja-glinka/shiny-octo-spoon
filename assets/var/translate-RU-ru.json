@@ -1,0 +1,12 @@
+{
+  "title-login": "Логин",
+  "title-signup": "Регистрация",
+  "login-field-label": "Логин",
+  "password-field-label": "Пароль",
+  "password-repeat-field-label": "Повторить пароль",
+  "name-field-label": "Имя",
+  "mail-field-label": "Почта",
+  "login-button-text": "Войти",
+  "signup-button-text": "Регистрация",
+  "avatar-field-labe": "Фото профиля"
+}

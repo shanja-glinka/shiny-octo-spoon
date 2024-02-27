@@ -150,7 +150,7 @@ class Request
             $requestUrl = substr($requestUrl, 0, strpos($requestUrl, '?'));
         }
 
-        if ($requestUrl[strlen($requestUrl) - 1] == '/') {
+        if (strlen($requestUrl) > 1 && $requestUrl[strlen($requestUrl) - 1] == '/') {
             $requestUrl = substr($requestUrl, 0,  strlen($requestUrl) - 1);
         }
 

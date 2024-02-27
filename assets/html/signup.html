@@ -1,1 +1,125 @@
-<h1>Signup</h1>
+<!DOCTYPE html>
+<html data-lang="RU-ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Signup</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body class="align">
+    <div class="grid">
+      <form action="#" method="POST" class="form signup">
+        <h1 data-translate="title-signup"></h1>
+
+        <div class="form__field">
+          <label for="signup__avatar">
+            <span data-translate="avatar-field-label">Avatar</span>
+          </label>
+          <input
+            id="signup__avatar"
+            type="file"
+            name="avatar"
+            class="form__input"
+            required
+          />
+        </div>
+
+        <div class="form__field">
+          <label for="signup__login">
+            <span data-translate="login-field-label"></span>
+          </label>
+          <input
+            id="signup__login"
+            type="text"
+            name="login"
+            class="form__input"
+            placeholder="login"
+            required
+          />
+        </div>
+
+        <div class="form__field">
+          <label for="signup__password">
+            <span data-translate="password-field-label"></span>
+          </label>
+          <input
+            id="signup__password"
+            type="password"
+            name="password"
+            class="form__input"
+            placeholder="Password"
+            required
+          />
+        </div>
+
+        <div class="form__field">
+          <label for="signup__password">
+            <span data-translate="password-repeat-field-label">Password Repeat</span>
+          </label>
+          <input
+            id="signup__password"
+            type="password"
+            name="password2"
+            class="form__input"
+            placeholder="Password"
+            required
+          />
+        </div>
+
+        <div class="form__field">
+          <label for="signup__name">
+            <span data-translate="name-field-label">Name</span>
+          </label>
+          <input
+            id="signup__name"
+            type="text"
+            name="name"
+            class="form__input"
+            placeholder="Name"
+            required
+          />
+        </div>
+
+        <div class="form__field">
+          <label for="signup__mail">
+            <span data-translate="mail-field-label">Mail</span>
+          </label>
+          <input
+            id="signup__mail"
+            type="email"
+            name="mail"
+            class="form__input"
+            placeholder="Mail"
+            pattern=".+@example\.com"
+            required
+          />
+        </div>
+
+        <div class="form__field">
+          <button type="submit" data-translate="signup-button-text"></button>
+        </div>
+
+        <div class="form__field">
+          <select
+            id="page__language"
+            name="language"
+            class="form__select"
+          >
+            <option value="RU-ru">Русский</option>
+            <option value="EN-en">English</option>
+          </select>
+        </div>
+        
+      </form>
+
+      <p class="text--center">
+        <a href="/login" data-translate="title-login"></a>
+      </p>
+    </div>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
